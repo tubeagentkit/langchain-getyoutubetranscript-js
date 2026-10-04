@@ -1,0 +1,75 @@
+{
+  "name": "@tubeagentkit/langchain-getyoutubetranscript",
+  "version": "0.1.0",
+  "description": "YouTube transcript tools and document loader for LangChain.js: get YouTube video transcripts with timestamps and search YouTube from agents and RAG pipelines, via the GetYouTubeTranscript API.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "langchain",
+    "langchainjs",
+    "langchain-js",
+    "agents",
+    "tools",
+    "document-loader",
+    "rag",
+    "youtube",
+    "youtube-transcript",
+    "youtube-transcripts",
+    "transcript",
+    "captions",
+    "subtitles",
+    "youtube-search",
+    "llm"
+  ],
+  "author": "tubeagentkit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tubeagentkit/langchain-getyoutubetranscript-js.git"
+  },
+  "homepage": "https://github.com/tubeagentkit/langchain-getyoutubetranscript-js#readme",
+  "bugs": {
+    "url": "https://github.com/tubeagentkit/langchain-getyoutubetranscript-js/issues"
+  },
+  "dependencies": {
+    "@tubeagentkit/getyoutubetranscript": "^0.2.1"
+  },
+  "peerDependencies": {
+    "@langchain/core": ">=0.3.0 <2.0.0",
+    "zod": "^3.25.76 || ^4.1.8"
+  },
+  "devDependencies": {
+    "@langchain/core": "^1.2.14",
+    "zod": "^4.1.8",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.2",
+    "vitest": "^5.0.2",
+    "@types/node": "^22.0.0"
+  }
+}
